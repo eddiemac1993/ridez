@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .hero {
+        text-align: center;
+        padding: 4rem 0;
+        background: linear-gradient(45deg, #0a192f, #172a45);
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #64ffda;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .feature-box {
+        background-color: rgba(255,255,255,0.05);
+        border-radius: 10px;
+        padding: 2rem;
+        margin-top: 2rem;
+        transition: transform 0.3s ease;
+    }
+    .feature-box:hover {
+        transform: translateY(-10px);
+    }
+    .feature-box h2 {
+        color: #64ffda;
+        margin-bottom: 1rem;
+    }
+</style>
+
+<div class="hero">
+    <h1 class="display-4">Welcome to Ridez</h1>
+    <p class="lead">Your futuristic solution for rides and food delivery.</p>
+    <hr class="my-4" style="background-color: #64ffda;">
+    <p>Experience the future of transportation and food delivery.</p>
+    <a class="btn btn-primary btn-lg mr-2" href="{% url 'request_ride' %}" role="button">Request a Ride</a>
+    <a class="btn btn-success btn-lg" href="{% url 'place_order' %}" role="button">Order Food</a>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="feature-box">
+            <h2>Need a ride?</h2>
+            <p>Our AI-powered system matches you with the perfect driver for a smooth, efficient journey to your destination.</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="feature-box">
+            <h2>Hungry?</h2>
+            <p>Enjoy a wide selection of cuisines delivered by our eco-friendly fleet, right to your doorstep.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

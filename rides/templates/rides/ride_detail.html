@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Ride Details
+{% endblock %}
+
+{% block content %}
+    <h1>Ride Details</h1>
+    <p>Ride ID: {{ ride.id }}</p>
+    <p>Customer: {{ ride.customer.username }}</p>
+    <p>Pickup Location: {{ ride.pickup_location }}</p>
+    <p>Destination: {{ ride.destination }}</p>
+    <p>Status: {{ ride.get_status_display }}</p>
+    {% if ride.driver %}
+        <p>Driver: {{ ride.driver.username }}</p>
+    {% else %}
+        <p>No driver assigned yet.</p>
+    {% endif %}
+{% endblock %}

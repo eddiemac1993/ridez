@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Available Rides
+{% endblock %}
+
+{% block content %}
+    <h1>Available Rides</h1>
+    <ul>
+        {% for ride in rides %}
+            <li>
+                <p>Ride ID: {{ ride.id }}</p>
+                <p>Customer: {{ ride.customer.username }}</p>
+                <p>Pickup Location: {{ ride.pickup_location }}</p>
+                <p>Destination: {{ ride.destination }}</p>
+                <a href="{% url 'accept_ride' ride.id %}">Accept Ride</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

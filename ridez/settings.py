@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-rutv&rxzr&4blxe-jrdi1#t5i6siio#dni39kx4nz#)!uu%xk#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rides.pythonanywhere.com']
+
 
 
 # Application definition
